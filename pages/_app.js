@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return <>
   <Head>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&display=swap" /> 
   </Head>
   <Component {...pageProps} />
