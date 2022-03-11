@@ -42,7 +42,9 @@ function Home() {
          <div className="bn40div my-5">
                 <a className="bn40 mx-1" onClick={()=>{window.location.reload()}} style={{fontSize:"24px",marginLeft:"30vw",}}  >Movie List</a>
           </div>
+          <div>
        <BtnComponent genrex={genrex} setGenre={setGenre} movie={movie} setMovie={setMovie} mvi={mvi} setMvi={setMvi}/>
+       </div>
         <motion.div layout className="movbody" id="hr" style={{display:"grid",gridTemplateColumns:"auto auto auto auto",gridRowGap:"50px",gridColumnGap:"15px",}}>
             <AnimatePresence>
           {
