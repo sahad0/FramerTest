@@ -3,7 +3,7 @@ import{useEffect, useState} from "react";
 
 
 
-import { motion,AnimatePresence } from "framer-motion";
+import { motion,AnimatePresence,AnimateSharedLayout } from "framer-motion";
 import React from "react";
 import BtnComponent from "./buttons";
 import Mov from "../Components/MovieComp/Mov";
@@ -38,6 +38,7 @@ function Home() {
     }
 
     return (
+      <AnimateSharedLayout>
        <div className="Ap">
          <div className="bn40div my-5">
                 <a className="bn40 mx-1" onClick={()=>{window.location.reload()}} style={{fontSize:"24px",marginLeft:"30vw",}}  >Movie List</a>
@@ -57,6 +58,7 @@ function Home() {
           </motion.div>
         
        </div>
+       </AnimateSharedLayout>
     )
    
 };
