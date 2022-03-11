@@ -45,7 +45,7 @@ function Home() {
           <div>
        <BtnComponent genrex={genrex} setGenre={setGenre} movie={movie} setMovie={setMovie} mvi={mvi} setMvi={setMvi}/>
        </div>
-        <motion.div layout className="movbody" id="hr" style={{display:"grid",gridTemplateColumns:"auto auto auto auto",gridRowGap:"50px",gridColumnGap:"15px",}}>
+        <motion.div layout className="movbody" id="hr" >
             <AnimatePresence>
           {
             mvi && mvi.map((p)=>{

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import{motion} from "framer-motion";
+
 const frameEff = {
 
     anim : {
@@ -54,11 +55,11 @@ function BtnComponent({genrex,setGenre,movie,setMovie,mvi,setMvi}) {
         <>
             
             <div className="bn40div my-5">
-                <motion.a variants={frameEff} initial="starter" exit="ender" whileHover="hover" class="bn40 mx-1" onClick={()=>{setGenre(0)}} >All</motion.a>
-                <motion.a variants={frameEff} initial="starter" exit="ender" whileHover="hover" class="bn40 mx-1" onClick={()=>{setGenre(35)}} >Comedy</motion.a>
-                <motion.a variants={frameEff} initial="starter" exit="ender" whileHover="hover" class="bn40 mx-1" onClick={()=>{setGenre(12)}} >Adventure</motion.a>
-                <motion.a variants={frameEff} initial="starter" exit="ender" whileHover="hover" class="bn40 mx-1" onClick={()=>{setGenre(28)}} >Action</motion.a>
-                <motion.a variants={frameEff} initial="starter" exit="ender" whileHover="hover" class="bn40 mx-1" onClick={()=>{setGenre(80)}} >Crime</motion.a>
+                <motion.a variants={frameEff} initial="starter" exit="ender" whileHover="hover" className="bn40 mx-1" onClick={()=>{setGenre(0)}} >All</motion.a>
+                <motion.a variants={frameEff} initial="starter" exit="ender" whileHover="hover" className="bn40 mx-1" onClick={()=>{setGenre(35)}} >Comedy</motion.a>
+                <motion.a variants={frameEff} initial="starter" exit="ender" whileHover="hover" className="bn40 mx-1" onClick={()=>{setGenre(12)}} >Adventure</motion.a>
+                <motion.a variants={frameEff} initial="starter" exit="ender" whileHover="hover" className="bn40 mx-1" onClick={()=>{setGenre(28)}} >Action</motion.a>
+                <motion.a variants={frameEff} initial="starter" exit="ender" whileHover="hover" className="bn40 mx-1" onClick={()=>{setGenre(80)}} >Crime</motion.a>
             </div>
 
             
