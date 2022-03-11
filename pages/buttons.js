@@ -1,4 +1,26 @@
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
+import {motion} from "framer-motion";
+const frameEff = {
+
+    anim : {
+        // opacity: 0,
+        // scale:0,
+
+    },
+    starter : {
+        // opacity :1,
+        // scale:1,
+    },
+    ender :{
+        // opacity:0,
+        // scale:0,
+    },
+    hov : {
+        scale:1.1,
+    }
+
+  
+  }
 
 function BtnComponent({genrex,setGenre,movie,setMovie,mvi,setMvi}) {
 
@@ -33,12 +55,12 @@ function BtnComponent({genrex,setGenre,movie,setMovie,mvi,setMvi}) {
     return (
         <>
             
-            <div className="bn40div my-5">
-                <a class="bn40 mx-1" onClick={()=>{setGenre(0)}} >All</a>
-                <a class="bn40 mx-1" onClick={()=>{setGenre(35)}} >Comedy</a>
-                <a class="bn40 mx-1" onClick={()=>{setGenre(12)}} >Adventure</a>
-                <a class="bn40 mx-1" onClick={()=>{setGenre(28)}} >Action</a>
-                <a class="bn40 mx-1" onClick={()=>{setGenre(80)}} >Crime</a>
+            <div  className="bn40div my-5">
+                <motion.a variants={frameEff} initial="starter" exit="ender" whileHover="hov" class="bn40 mx-1" onClick={()=>{setGenre(0)}} >All</motion.a>
+                <motion.a variants={frameEff} initial="starter" exit="ender" whileHover="hov" class="bn40 mx-1" onClick={()=>{setGenre(35)}} >Comedy</motion.a>
+                <motion.a variants={frameEff} initial="starter" exit="ender" whileHover="hov" class="bn40 mx-1" onClick={()=>{setGenre(12)}} >Adventure</motion.a>
+                <motion.a variants={frameEff} initial="starter" exit="ender" whileHover="hov" class="bn40 mx-1" onClick={()=>{setGenre(28)}} >Action</motion.a>
+                <motion.a variants={frameEff} initial="starter" exit="ender" whileHover="hov" class="bn40 mx-1" onClick={()=>{setGenre(80)}} >Crime</motion.a>
             </div>
 
             
