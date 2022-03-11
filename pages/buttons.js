@@ -9,6 +9,11 @@ function BtnComponent({genrex,setGenre,movie,setMovie,mvi,setMvi}) {
 
 
     function total(){
+        if(genrex==0 && movie){
+
+            setMvi(movie);
+            return;
+        }
         
         let arr = movie.filter((p)=>{
 
@@ -21,19 +26,24 @@ function BtnComponent({genrex,setGenre,movie,setMovie,mvi,setMvi}) {
             
 
         });
-        console.log(arr);
+        
         setMvi(arr);
     }
 
     return (
         <>
-            <button className="btn btn-warning mx-3 my-4" onClick={()=>{setGenre(0)}}      >All</button>
-          <button className="btn btn-primary mx-3 my-4"   onClick={()=>{setGenre(27)}}    >Horror</button>
-          <button className="btn btn-primary mx-3 my-4"   onClick={()=>{setGenre(10749)}}    >Romance</button>
-          <button className="btn btn-success mx-3 my-4"   onClick={()=>{setGenre(35)}}    >Comedy</button>
-          <button className="btn btn-success mx-3 my-4"   onClick={()=>{setGenre(12)}}    >Adventure</button>
-          <button className="btn btn-danger mx-3 my-4"    onClick={()=>{setGenre(28)}}   >Action</button>
-          <button className="btn btn-danger mx-3 my-4"    onClick={()=>{setGenre(80)}}   >Crime</button>
+            
+            <div className="bn40div my-5">
+                <a class="bn40 mx-1" onClick={()=>{setGenre(0)}} >All</a>
+                <a class="bn40 mx-1" onClick={()=>{setGenre(35)}} >Comedy</a>
+                <a class="bn40 mx-1" onClick={()=>{setGenre(12)}} >Adventure</a>
+                <a class="bn40 mx-1" onClick={()=>{setGenre(28)}} >Action</a>
+                <a class="bn40 mx-1" onClick={()=>{setGenre(80)}} >Crime</a>
+            </div>
+
+            
+          
+         
         </>
 
     );

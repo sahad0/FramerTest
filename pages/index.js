@@ -1,9 +1,21 @@
 import{useEffect, useState} from "react";
-import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap//
 
 
+
+
+import { motion,AnimatePresence } from "framer-motion";
 import React from "react";
 import BtnComponent from "./buttons";
+import Mov from "../Components/MovieComp/Mov";
+
+
+const frameEff = {
+
+  animate : {}
+
+}
+
+
 
 function Home() {
 
@@ -23,52 +35,27 @@ function Home() {
         const movies = await data.json();
 
         setMovie(movies.results);
+        setMvi(movies.results);
       } catch (err) {
         console.log(err);
       }
     }
 
     return (
-      <>
-        <div className="container-fluid">
-            <BtnComponent genrex={genrex} setGenre={setGenre} movie={movie} setMovie={setMovie} mvi={mvi} setMvi={setMvi}/>
-          
-          <div className="row mx-5">
-          {genrex !=0 ?
-            mvi.map((p,i)=>{
-              return(
+       <div className="Ap">
+       <BtnComponent genrex={genrex} setGenre={setGenre} movie={movie} setMovie={setMovie} mvi={mvi} setMvi={setMvi}/>
+        <motion.div layout className="movbody" id="hr" style={{display:"grid",gridTemplateColumns:"auto auto auto auto",gridRowGap:"50px",gridColumnGap:"15px",}}>
+            <AnimatePresence>
+          {
+            mvi && mvi.map((p)=>{
+              return <Mov key={p.id} p={p}/>
               
-                <div key={i++} className="col-md-3" >
-                <div className="card my-3">
-              <div className="card-body">
-                  <p>{p.original_title}</p>
-                  <img className="imgg img-fluid" src={"https://image.tmdb.org/t/p/w400"+p.backdrop_path} alt=""></img>
-                </div>
-                </div>
-                </div>
-              )
-            })
-            :
 
-            movie.map((p,i)=>{
-              return(
-              
-                <div key={i++} className="col-md-3" >
-                <div className="card my-3">
-              <div className="card-body">
-                  <p>{p.original_title}</p>
-                  <img className="imgg img-fluid" src={"https://image.tmdb.org/t/p/w400"+p.backdrop_path} alt=""></img>
-                </div>
-                </div>
-                </div>
-              )
-            })
-
-
-          }
-          </div>
-        </div>
-      </>
+            })}
+          </AnimatePresence>
+          </motion.div>
+        
+       </div>
     )
    
 };
