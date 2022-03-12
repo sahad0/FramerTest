@@ -41,7 +41,7 @@ function Home() {
       <AnimateSharedLayout>
        <div className="Ap">
          <div className="bn40div my-5">
-                <a className="bn40 mx-1" onClick={()=>{window.location.reload()}} style={{fontSize:"24px",marginLeft:"30vw",}}  >Movie List</a>
+                <a className="bn40 mx-1" onClick={()=>{window.location.reload()}} style={{fontSize:"24px",marginLeft:"50px",}}  >Movie List</a>
           </div>
           <div>
        <BtnComponent genrex={genrex} setGenre={setGenre} movie={movie} setMovie={setMovie} mvi={mvi} setMvi={setMvi}/>
